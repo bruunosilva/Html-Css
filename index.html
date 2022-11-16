@@ -10,6 +10,10 @@
 
 <body>
   <script>
+    letras = []
+    letras[0] = 'a'
+    console.log(letras)
+
     function arredondar(valor) {
       return Math.round(valor * 100) / 100
     }
@@ -30,7 +34,7 @@
       console.log(mes)
       saldo = saldoInicial
       for(lancamento of lancamentos){
-          saldo = saldo + lancamento
+          saldo += lancamento
       }
       estaNegativo = saldo < 0
       if (estaNegativo) {
@@ -49,11 +53,11 @@
     saldo1 = calcularSaldo("janeiro", saldoInicial, lancamentosJaneiro)
     console.log(saldo1)
     // fevereiro
-    lancamentosFevereiro = [3000, -1200, -250, -100, -100, -500, 0, -1000, -400, 0]
+    lancamentosFevereiro = [3000, -1200, -250, -100, -100, -500, -1000, -400]
     saldo2 = calcularSaldo("fevereiro", saldo1, lancamentosFevereiro)
     console.log(saldo2)
     // Março
-    lancamentosMarco = [4000, -1200, -200, -100, -200, -500, -800, -1000, -400, 0]
+    lancamentosMarco = [4000, -1200, -200, -100, -200, -500, -800, -1000, -400]
     saldo3 = calcularSaldo("marco", saldo2, lancamentosMarco)
     console.log(saldo3)
     //ano
